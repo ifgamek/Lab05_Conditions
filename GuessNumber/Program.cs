@@ -1,62 +1,76 @@
-﻿// // Console.Write(":");
+﻿// // // Console.Write(":");
 
-// // int number = int.Parse(Console.ReadLine());
-// // if (number > 0)
+// // // int number = int.Parse(Console.ReadLine());
+// // // if (number > 0)
+// // // {
+// // //     Console.WriteLine("Число положительное.");
+// // // }
+// // // else if (number < 0)
+// // // {
+// // //     Console.WriteLine("Число отрицательное.");
+// // // }
+// // // else
+// // // {
+// // //     Console.WriteLine("Число равно нулю.");
+// // // }
+
+
+// // Console.Write("Введите балл (0-100): ");
+// // int score = int.Parse(Console.ReadLine());
+
+// // if (score >= 91)
 // // {
-// //     Console.WriteLine("Число положительное.");
+// //     Console.WriteLine("Оценка: Отлично (5)");
 // // }
-// // else if (number < 0)
+// // else if (score >= 71)
 // // {
-// //     Console.WriteLine("Число отрицательное.");
+// //     Console.WriteLine("Оценка: Хорошо(4)");
+// // }
+// // else if (score >= 51)
+// // {
+// //     Console.WriteLine("Оценка: Удовлетворительно(3)");
 // // }
 // // else
 // // {
-// //     Console.WriteLine("Число равно нулю.");
+// //     Console.WriteLine("Оценка Неудовлетворительно(2)");
 // // }
 
+// using System.Reflection.Metadata;
 
-// Console.Write("Введите балл (0-100): ");
-// int score = int.Parse(Console.ReadLine());
+// Console.WriteLine("Ввидите кол-во посещений(из 19): ");
+// int attendance = int.Parse(Console.ReadLine());
+// Console.Write("Введите среднйи балл по практике: ");
+// double practiceGpa = double.Parse(Console.ReadLine());
+// bool goodAttendance = attendance >= 14;
+// bool goodGrades = practiceGpa >= 3.0;
 
-// if (score >= 91)
+// if (goodAttendance && goodGrades)
 // {
-//     Console.WriteLine("Оценка: Отлично (5)");
+//     Console.WriteLine("+ Допуск к экзамену разрешен.");
 // }
-// else if (score >= 71)
+// else if (!goodAttendance && goodGrades)
 // {
-//     Console.WriteLine("Оценка: Хорошо(4)");
+//     Console.WriteLine("- Недостаточно посещений. Нужно отработать");
 // }
-// else if (score >= 51)
+// else if (goodAttendance && !goodGrades)
 // {
-//     Console.WriteLine("Оценка: Удовлетворительно(3)");
+//     Console.WriteLine("- Низкий балл по практике. Нужно пересдать работы.");
 // }
 // else
 // {
-//     Console.WriteLine("Оценка Неудовлетворительно(2)");
+//     Console.WriteLine("-Проблемы и с посещением, и с оценками. Срочно к преподавателю");
 // }
 
-using System.Reflection.Metadata;
+Console.Write("введите свой возраст");
+int age = int.Parse(Console.ReadLine());
+string ageGroup = age >= 18 ? "совершеннолетний" : "несовершеннолетний";
+Console.WriteLine($"Вы {ageGroup}.");
+Console.Write("\nВведите температуру за окном (C):");
+double temp = double.Parse(Console.ReadLine());
+string weather = temp >= 20 ? "тепло" : (temp >= 0 ? "прохладео" : "мороз");
+Console.WriteLine($"за окном{weather}");
 
-Console.WriteLine("Ввидите кол-во посещений(из 19): ");
-int attendance = int.Parse(Console.ReadLine());
-Console.Write("Введите среднйи балл по практике: ");
-double practiceGpa = double.Parse(Console.ReadLine());
-bool goodAttendance = attendance >= 14;
-bool goodGrades = practiceGpa >= 3.0;
-
-if (goodAttendance && goodGrades)
-{
-    Console.WriteLine("+ Допуск к экзамену разрешен.");
-}
-else if (!goodAttendance && goodGrades)
-{
-    Console.WriteLine("- Недостаточно посещений. Нужно отработать");
-}
-else if (goodAttendance && !goodGrades)
-{
-    Console.WriteLine("- Низкий балл по практике. Нужно пересдать работы.");
-}
-else
-{
-    Console.WriteLine("-Проблемы и с посещением, и с оценками. Срочно к преподавателю");
-}
+Console.Write("\nВведите число:");
+int n = int.Parse(Console.ReadLine());
+string parity = n % 2 == 0 ? "Четное" : "нечетное";
+Console.WriteLine($"Число {n} - {parity}");
